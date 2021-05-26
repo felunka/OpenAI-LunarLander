@@ -47,10 +47,13 @@ Even after close to 10.000 epochs the algorithem was not able to get an positive
 episode: 9875/10000, score: -170.62709316449394
 Average over last 100 episode: -198.05
 ```
-It is clearly possible to see an improvement over time, but after more then 10h of training the goal of the gym was not met:
-TODO learning curve
-![alt text](gradient_graph_avg.png "Gradient graph (avg)")
-![alt text](gradient_graph.png "Gradient graph")
+It is clearly possible to see an improvement from epoch 8000 onwards, but after more then 10h of training the goal of the gym was not met:
+
+![alt text](SDG_avg_graph.png "Gradient graph (avg)")
+
+The not averaged version also shows, that even after 8000 epochs there is no consistency.
+
+![alt text](SDG_graph.png "Gradient graph")
 
 Here are some recordings while training:
 
@@ -112,9 +115,13 @@ The final result was able to land nearly every time:
 
 (5x speed)
 
-Progress graph (X-Axsis: Epoch; Y-Axsis: Score):
+In a second run the algorithem reached the goal even sooner after 280 epochs. Progress graph (X-Axsis: Epoch; Y-Axsis: Score):
 
 ![alt text](DQN_graph.png "DQN Progress")
+
+The lerning progress is even better shown by the averaged version:
+
+![alt text](DQN_avg_graph.png "DQN Progress avg")
 
 # Results
 

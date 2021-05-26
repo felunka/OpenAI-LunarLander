@@ -1,5 +1,6 @@
 import gym
 import random
+import json
 from keras import Sequential
 from collections import deque
 from keras.layers import Dense
@@ -102,6 +103,12 @@ def train_dqn(episode):
   # Plot avg
   plt.plot([i+1 for i in range(0, len(avg), 2)], avg[::2])
   plt.show()
+
+  # dump
+  with open('dqn_loss.json', 'w') as outfile:
+    json.dump(loss, outfile)
+  with open('dqn_avg.json', 'w') as outfile:
+    json.dump(avg, outfile)
   return loss
 
 
